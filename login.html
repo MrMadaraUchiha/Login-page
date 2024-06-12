@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Site Name | Login</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ben J - https://benjenkins.xyz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <style type="text/css">
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            width: 100%;
+            height: 100%;
+        }
+
+        .login__widget {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, .16);
+            display: block;
+            width: 600px;
+            padding: 40px 50px;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0 auto;
+        }
+
+        #login__pageTitle {
+            margin: 0;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .login__inputGroup {
+            display: block;
+            margin-top: 18px;
+        }
+
+        .login__label {
+            font-weight: 500;
+            color: rgba(0, 0, 0, .33);
+            font-size: 18px;
+            display: block;
+            margin-top: 0;
+        }
+
+        .login__input {
+            display: block;
+            width: 100%;
+            padding: 14px 25px;
+            color: black;
+            font-weight: 500;
+            border-radius: 7px;
+            transition: all .3s ease-out;
+            border: 1px solid #CECECE;
+            font-size: 17px;
+            outline: none;
+            margin-top: 10px;
+            min-width: 100%;
+            max-width: 100%;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .login__input::-webkit-input-placeholder {
+            color: rgba(0, 0, 0, .33);
+            font-weight: 500;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .login__input::-moz-placeholder {
+            color: rgba(0, 0, 0, .33);
+            font-weight: 500;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .login__input:-ms-input-placeholder {
+            color: rgba(0, 0, 0, .33);
+            font-weight: 500;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .login__input:-moz-placeholder {
+            color: rgba(0, 0, 0, .33);
+            font-weight: 500;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #login__submitButton {
+            color: white;
+            border-radius: 7px;
+            display: block;
+            width: 140px;
+            font-weight: 500;
+            padding: 14px 0;
+            margin: 30px auto 0 auto;
+            outline: none;
+            border: none;
+            font-size: 17px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        @media (max-width: 600px) {
+            .login__widget {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body id="body">
+    
+    <div class="login__widget">
+        <h1 id="login__pageTitle">Sign In</h1>
+        <form action method="POST">
+            <div class="login__inputGroup">
+                <label for="login__usernameInput" class="login__label">Username/Email</label>
+                <input type="text" name="username" class="login__input" id="username__usernameInput" placeholder="john@example.com" />
+            </div>
+            <div class="login__inputGroup">
+                <label for="login__passwordInput" class="login__label">Password</label>
+                <input type="password" name="password" class="login__input" id="username__passwordInput" />
+            </div>
+            <button type="submit" name="submit" id="login__submitButton">Submit</button>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        // Configuration for the site
+        var siteColor = "#6747e8";
+
+        // Do not edit below this line
+        window.addEventListener("load", function() {
+            document.getElementById("body").style.backgroundColor = siteColor;
+            document.getElementById("login__pageTitle").style.color = siteColor;
+            document.getElementById("login__submitButton").style.backgroundColor = siteColor;
+            document.getElementById("login__submitButton").style.boxShadow = "0 0 6px " + siteColor + "8C";
+            document.getElementById("username__usernameInput").addEventListener("focusin", function() {
+                this.style.boxShadow = "0 0 6px " + siteColor + "8C";
+            });
+            document.getElementById("username__usernameInput").addEventListener("focusout", function() {
+                this.style.boxShadow = "0 0 0 #FFFFFF";
+            });
+            document.getElementById("username__passwordInput").addEventListener("focusin", function() {
+                this.style.boxShadow = "0 0 6px " + siteColor + "8C";
+            });
+            document.getElementById("username__passwordInput").addEventListener("focusout", function() {
+                this.style.boxShadow = "0 0 0 #FFFFFF";
+            });
+        });
+    </script>
+</body>
+</html>
